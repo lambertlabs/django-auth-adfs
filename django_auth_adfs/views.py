@@ -19,6 +19,7 @@ logger = logging.getLogger("django_auth_adfs")
 
 class OAuth2CallbackView(View):
     def get(self, request):
+        logging.info("inside callback get handler !!!")
         """
         Handles the redirect from ADFS to our site.
         We try to process the passed authorization code and login the user.
